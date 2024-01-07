@@ -1,6 +1,6 @@
 <suite name ="Parallel" verbose ="1" >
     <parameter name ="browser" value="Android" />
-    <test name ="Appium Project" >
+    <test name ="Appium Project Goksel" >
         <classes>
             <class name ="runners.Runner" />
         </classes>
