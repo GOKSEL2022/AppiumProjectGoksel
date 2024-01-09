@@ -1,10 +1,9 @@
-package hooks;
+package util;
+
 import io.appium.java_client.AppiumDriver;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import io.cucumber.java.*;
+import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
-import utilities.ConfigReader;
-import utilities.Driver;
 
 import java.util.Properties;
 
@@ -12,16 +11,16 @@ public class Hooks {
 
     AppiumDriver driver;
     Properties properties;
-
     @Before
-    public void before(){
+    public void before() {
         String browser = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser");
         properties = ConfigReader.initialize_Properties();
-        driver = Driver.initialize_Driver(browser);
+        driver = DriverFactory.initialize_Driver(browser);
     }
 
+
     @After
-    public void after(){
+    public void after() {
         driver.quit();
     }
 }
