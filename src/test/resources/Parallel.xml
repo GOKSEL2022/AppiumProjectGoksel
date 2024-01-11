@@ -2,7 +2,7 @@
 
 <suite name="Parallel" verbose="1" >
     <parameter name="browser"  value="Android"/>
-    <test name="AppiumProject">
+    <test name="AppiumProjectGoksel">
         <classes>
             <class name="testRunners.runner"/>
         </classes>
